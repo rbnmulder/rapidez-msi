@@ -4,13 +4,13 @@ This module uses a HTTP Middleware to have access to the ```stock_id ``` for tha
 
 It also features 2 Global Scopes used by [Eventy Filters](https://docs.rapidez.io/0.x/package-development.html#eventy-filters) to enrich product Detail and Overview Page and The [Rapidez:Indexer](https://docs.rapidez.io/0.x/indexer.html#indexer) with Stock Status Information.
 
-##Requirements
+## Requirements
 This modules requires the Magento MSI functionality to be active and fully functional on the Magento side.
 Stock(s) and Source(s) should be created and assigned to the Website(s).
 
 The [Message Queues](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/message-queues/message-queues.html) of Magento should be functional as MSI stock tables will be update through this mechanism. For example, the salable status of a product will be updated by process ` inventory.reservations.updateSalabilityStatus`.
 
-##Installation
+## Installation
 ```composer require rapidez/msi```
 
 To expose the `stock_qty` to the product detail and overview page you can add the following configuration to the ```config/rapidez.php``` file:
@@ -23,9 +23,9 @@ To expose the `stock_qty` to the product detail and overview page you can add th
 ```
 Don't forget to reindex rapidez with `artisan rapidez:index` for `stock_qty` to be available in the Elasticsearch Indexes.
 
-##Note
+## Note
 The MSI functionality in this module is currently supported for the following product types:
 - Simple
 
-##License
+## License
 GNU General Public License v3. Please see [License File](LICENSE) File for more information.
